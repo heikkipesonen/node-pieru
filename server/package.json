@@ -1,0 +1,26 @@
+{
+  "name": "node-pieru",
+  "version": "1.0.0",
+  "description": "pieru with node",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pieru",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "firebase-admin": "^4.0.4",
+    "mysql": "^2.12.0",
+    "restify": "^4.3.0",
+    "sequelize": "^3.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,0 +1,24 @@
+silakka-app:
+    build: .
+    ports:
+        - "9001:9001"
+    links:
+        - silakka-db:db
+    environment:
+        - MESSAGE_TOKEN=iBGU831yHigNBiVzSeFQjbij
+        - PORT=9001
+        - DATABASE_FORCE_SYNC=true
+        - MYSQL_HOST=db
+        - MYSQL_DB=silakka
+        - MYSQL_USER=root
+        - MYSQL_PASSWORD=kissakala
+    volumes:
+        - ./server:/server
+
+silakka-db:
+    image: mysql:latest
+    ports:
+        - "3306"
+    environment:
+        - MYSQL_ROOT_PASSWORD=kissakala
+        - MYSQL_DATABASE=silakka
